@@ -1,0 +1,86 @@
+<%- partial('_partial/head') %>
+<body data-lang="<%= page.lang %>">
+  <%- partial('_partial/header') %>
+  <main>
+    <section class="hero" id="top">
+      <div class="hero__content">
+        <h1><%= page.hero_title %></h1>
+        <p class="hero__copy"><%= page.hero_copy %></p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#contact"><%= page.primary_cta %></a>
+          <a class="button button--secondary" href="#product"><%= page.secondary_cta %></a>
+        </div>
+        <p class="hero__trusted"><%= page.trusted %></p>
+      </div>
+      <div class="hero__visual" aria-label="Video production interface preview">
+        <div class="video-card">
+          <div class="video-card__screen">
+            <span class="video-card__play"></span>
+            <div class="video-card__scanline"></div>
+          </div>
+          <div class="video-card__timeline">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="video-card__meta">
+            <strong>04:28</strong>
+            <small>MASTER / LOCALIZED / SOCIAL</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Key numbers">
+      <% page.sections.stats.forEach(function(item) { %>
+        <article>
+          <strong><%= item.value %></strong>
+          <span><%= item.label %></span>
+        </article>
+      <% }) %>
+    </section>
+
+    <section class="section section--features" id="product">
+      <div class="section__heading">
+        <h2><%= page.sections.features_title %></h2>
+      </div>
+      <div class="feature-grid">
+        <% page.sections.features.forEach(function(feature, index) { %>
+          <article class="feature-card">
+            <span class="feature-card__number">0<%= index + 1 %></span>
+            <h3><%= feature.title %></h3>
+            <p><%= feature.copy %></p>
+          </article>
+        <% }) %>
+      </div>
+    </section>
+
+    <section class="section workflow" id="workflow">
+      <div class="section__heading">
+        <h2><%= page.sections.workflow_title %></h2>
+      </div>
+      <ol class="workflow__steps">
+        <% page.sections.workflow.forEach(function(step) { %>
+          <li><span><%= step %></span></li>
+        <% }) %>
+      </ol>
+    </section>
+
+    <section class="showcase" id="cases">
+      <div>
+        <h2><%= page.sections.showcase_title %></h2>
+        <p><%= page.sections.showcase_copy %></p>
+      </div>
+      <div class="showcase__reel" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2><%= page.sections.contact_title %></h2>
+      <p><%= page.sections.contact_copy %></p>
+      <a class="button button--primary" href="mailto:hello@example.com"><%= page.sections.contact_cta %></a>
+    </section>
+  </main>
+  <%- partial('_partial/footer') %>
+  <script src="<%- url_for('/js/site.js') %>"></script>
+</body>
+</html>

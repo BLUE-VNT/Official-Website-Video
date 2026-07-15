@@ -1,0 +1,22 @@
+{
+  "name": "official-website-video",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A multilingual official website built with Hexo.",
+  "scripts": {
+    "clean": "hexo clean",
+    "build": "hexo generate",
+    "dev": "hexo server --port 4000",
+    "deploy": "hexo deploy"
+  },
+  "hexo": {
+    "version": "7.3.0"
+  },
+  "dependencies": {
+    "hexo": "^7.3.0",
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-marked": "^7.0.1",
+    "hexo-renderer-stylus": "^3.0.1",
+    "hexo-server": "^3.0.0"
+  }
+}

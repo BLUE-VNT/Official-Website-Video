@@ -1,0 +1,24 @@
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="<%= config.official_site.brand %>">
+    <span class="brand__mark"></span>
+    <span><%= config.official_site.brand %></span>
+  </a>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a href="#product"><%= page.sections.nav.product %></a>
+    <a href="#workflow"><%= page.sections.nav.workflow %></a>
+    <a href="#cases"><%= page.sections.nav.cases %></a>
+    <a href="#contact"><%= page.sections.nav.contact %></a>
+  </nav>
+  <div class="language-switcher">
+    <button type="button" aria-expanded="false" aria-controls="language-menu">
+      <%= config.official_site.languages[page.lang].label %>
+    </button>
+    <div id="language-menu" role="menu">
+      <% Object.keys(config.official_site.languages).forEach(function(code) { %>
+        <a role="menuitem" href="<%= config.official_site.languages[code].path %>" class="<%= code === page.lang ? 'is-active' : '' %>">
+          <%= config.official_site.languages[code].label %>
+        </a>
+      <% }) %>
+    </div>
+  </div>
+</header>
