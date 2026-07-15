@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#0f172a">
     <title><%= page.title ? page.title + ' | ' + config.title : config.title %></title>
     <% Object.keys(config.official_site.languages).forEach(function(code) { %>
-      <link rel="alternate" hreflang="<%= code %>" href="<%= config.official_site.languages[code].path %>">
+      <link rel="alternate" hreflang="<%= code %>" href="<%= full_url_for(config.official_site.languages[code].path) %>">
     <% }) %>
     <link rel="stylesheet" href="<%- url_for('/css/style.css') %>">
   </head>

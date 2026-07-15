@@ -1,4 +1,4 @@
 ---
 layout: redirect
-target: /zh-cn/
+target: zh-cn/
 ---

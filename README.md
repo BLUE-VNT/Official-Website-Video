@@ -27,9 +27,11 @@ npm run build
 
 在 GitHub 仓库中进入 `Settings -> Pages`，将 `Build and deployment` 的 `Source` 设置为 `GitHub Actions`。之后推送到 `main` 分支，或在 Actions 页面手动运行 `Deploy GitHub Pages`，即可发布站点。
 
-如果部署到项目子路径，例如 `https://username.github.io/repository/`，请将 `_config.yml` 中的 `url` 和 `root` 改成对应地址：
+当前项目已按 GitHub Pages 项目站点配置：
 
 ```yaml
-url: https://username.github.io/repository
-root: /repository/
+url: https://blue-vnt.github.io/Official-Website-Video
+root: /Official-Website-Video/
 ```
+
+如果部署到其他仓库或自定义域名，请同步修改 `_config.yml` 中的 `url` 和 `root`。

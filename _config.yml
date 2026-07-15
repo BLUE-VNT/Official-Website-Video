@@ -8,8 +8,8 @@ language:
   - en
   - ja
 timezone: Asia/Ho_Chi_Minh
-url: https://example.com
-root: /
+url: https://blue-vnt.github.io/Official-Website-Video
+root: /Official-Website-Video/
 permalink: :lang/:title/
 permalink_defaults: {}
 source_dir: source
@@ -44,10 +44,10 @@ official_site:
   languages:
     zh-cn:
       label: 简体中文
-      path: /zh-cn/
+      path: zh-cn/
     en:
       label: English
-      path: /en/
+      path: en/
     ja:
       label: 日本語
-      path: /ja/
+      path: ja/

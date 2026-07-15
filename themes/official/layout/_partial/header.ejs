@@ -15,7 +15,7 @@
     </button>
     <div id="language-menu" role="menu">
       <% Object.keys(config.official_site.languages).forEach(function(code) { %>
-        <a role="menuitem" href="<%= config.official_site.languages[code].path %>" class="<%= code === page.lang ? 'is-active' : '' %>">
+        <a role="menuitem" href="<%= url_for(config.official_site.languages[code].path) %>" class="<%= code === page.lang ? 'is-active' : '' %>">
           <%= config.official_site.languages[code].label %>
         </a>
       <% }) %>
